@@ -79,3 +79,16 @@ get '/details/:id'do
 	# возвращаем представление details.erb
   	erb :details
 end
+
+# обработчик post-запроса /details/...
+#(браузер отправляет данные на сервер, мы их принииаем)
+
+post '/details/:id'do
+	# получаем переменную из url
+	post_id = params[:id]
+
+	# получаем переменную из пост-запроса
+	content = params[:content]	
+
+	erb "You com #{content} for post #{post_id}"
+end
