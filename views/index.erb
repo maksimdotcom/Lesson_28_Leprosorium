@@ -4,10 +4,11 @@
     <p>
         <%= post['content'] %>
         <br/>
+        <br/>
         Added at <%= post['created_date'] %>
         <br/>
         <br/>
-        <a href="/post/<%= post['id'] %>">Contents</a>
+        <a href="/details/<%= post['id'] %>">Contents</a>
     </p>
     <hr />
 <% end %>
